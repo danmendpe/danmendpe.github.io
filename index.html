@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<title>watsonx assistant</title>
+<body>
+
+
+<h1>Website for testing watsonx integrations</h1>
+
+<h2>Learn more about watsonx:</h2>
+
+<a href="https://ibm.biz/dev-watsonx">https://ibm.biz/dev-watsonx</a>
+
+<h2>watsonx Assitant workshop instructions:</h2>
+
+<a href="https://ibm.github.io/watsonx-chatbot-lab/">https://ibm.github.io/watsonx-chatbot-lab/</a>
+
+<h2>Optional) Create a Github page:</h2>
+
+<a href="https://pages.github.com/">https://pages.github.com/</a>
+
+</body>
+
+</html>
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "ff5020b7-60ca-41dd-be87-61353077d9fb", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "a06eac64-7a96-4add-b960-b3731cd5b35a", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
